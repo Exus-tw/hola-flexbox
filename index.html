@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Hola, Flexbox!</title>
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/moon.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
 </head>
 <body>
   <div class="reveal">
@@ -51,6 +62,18 @@
             <li>flex-wrap and align-content: grid</li>
           </ul>
         </section>
+        <section>
+          CSS code Sample
+          <pre>
+            <code>
+              flex-container {
+                display: flex;
+                flex-direction: column;
+                flex: 1 0 100px;
+              }
+            </code>
+          </pre>
+        </section>
       </section>
 
       <section>
@@ -75,9 +98,22 @@
       </section>
     </div>
   </div>
+  <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
+
   <script>
-  Reveal.initialize();
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
   </script>
 </body>
 </html>
