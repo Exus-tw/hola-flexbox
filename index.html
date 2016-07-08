@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Hola, Flexbox!</title>
   <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/theme/moon.css">
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -26,25 +27,68 @@
 
       <section>
         <section>
-          <h2>Introducción</h2>
+          <h2>Historia CSS Layout</h2>
         </section>
         <section>
-          <h3>Historia CSS Layout</h3>
-        </section>
-        <section>
-            <h3>Tables</h3>
+          <h3>Tables</h3>
+          <pre>
+            <code>
+              <table cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                      <td colspan="3" height="120px">....</td>
+                  </tr>
+                  <tr>
+                      <td class="menu" valign="top">...</td>
+                      <td class="content" valign="top">...</td>
+                      <td class="aSide" valign="top">...</td>
+                  </tr>
+                  <tr>
+                      <td colspan="3">...</td>
+                  </tr>
+              </table>
+            </code>
+          </pre>
         </section>
         <section>
             <h3>Problemas</h3>
             <ul>
-              <li>Estilo e markup misturados</li>
+              <li>Conteudo e layout misturados</li>
               <li>Acessibilidade ruim</li>
               <li>Código não legível</li>
             </ul>
         </section>
         <section>
-          <h3>Box Model</h3>
+          <h3>Tableless</h3>
+
+          <h3>Table para conteudo tabular</h3>
+          <h3>Box model para layout</h3>
         </section>
+        <section>
+          <h3>Box Model</h3>
+          <ul>
+            <li>Separa estilo da marcação</li>
+            <li>Muito utilizado hoje em dia</li>
+          </ul>
+          <pre>
+            <code>
+              .button {
+                display: block;
+                float: right;
+                width: 200px;
+                height: 20px;
+                padding: 10px;
+                border: 1px solid #333;
+              }
+
+              .footer {
+                position: fixed;
+                bottom: 0;
+                margin-top: 10px;
+              }
+            </code>
+          </pre>
+        </section>
+        <section data-background="images/box-model.png"></section>
         <section>
           <h3>Problemas</h3>
           <ul>
@@ -56,16 +100,61 @@
           </ul>
         </section>
         <section>
-          <h3>Grid Systems</h3>
+          <pre>
+             <code>
+               .clearfix {
+                 content: "";
+                 display: table;
+                 clear: both;
+               }
+
+               .inline {
+                 display: inline;
+                 float: right;
+                 display: inline-block;
+               }
+
+               .align-middle {
+                 vertical-align: middle;
+                 display: table-cell;
+               }
+             </code>
+           </pre>
+        </section>
+        <section>
+          <h2>Grid Systems</h2>
+          <ul>
+            <li>Abstração do box model</li>
+            <li>Começou com Blueprint</li>
+            <li>Criado para podermos ter colunas</li>
+          </ul>
+        </section>
+        <section data-background="images/grids.png"></section>
+        <section>
+          <img src="images/ejemplos/fluid-grid.png"/>
         </section>
         <section>
           <h3>Problemas</h3>
           <ul>
-            <li>Bootstrap, 960, blueprint, foundation, semantic.gs, etc...</li>
-            <li>A maioria não é semantica</li>
-            <li>Muitas opções diferentes</li>
+            <li>A maioria não é semantico</li>
             <li>Dependencia de uma biblioteca externa</li>
           </ul>
+        </section>
+        <section>
+          <pre>
+            <code>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8">...</div>
+                <div class="col-xs-6 col-md-4">...</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-4">...</div>
+                <div class="col-xs-6 col-sm-4">...</div>
+                <div class="clearfix visible-xs-block">...</div>
+                <div class="col-xs-6 col-sm-4">...</div>
+              </div>
+            </code>
+          </pre>
         </section>
         <section>
           <h3>Native CSS Layout</h3>

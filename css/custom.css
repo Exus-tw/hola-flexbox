@@ -1,0 +1,11 @@
+.reveal pre {
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.reveal pre code {
+  padding: 30px 0 !important;
+  font-size: 1.1em !important;
+  line-height: 1.1em !important;
+}
