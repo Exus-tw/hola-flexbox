@@ -195,18 +195,304 @@
           <h3>Propiedades de flexbox:</h3>
           <ul>
             <li>flex-direction: layout content horizontally and vertically</li>
-            <li>order: rearrange flexbox children</li>
-            <li>alignment: flexbox children</li>
-            <li>flex-basis: dimensions on children</li>
-            <li>flex-shrink &amp; flex-grow: resize children correctly</li>
-            <li>flex shorthand: Combining sizing properties</li>
-            <li>flex-wrap and align-content: grid</li>
+            <li>flex-wrap:</li>
+            <li>justify-content:</li>
+            <li>align-items:</li>
+            <li>order:</li>
+            <li>flex-basis:</li>
+            <li>flex-shrink &amp; flex-grow:</li>
+            <li>flex shorthand:</li>
+            <li>align-content:</li>
           </ul>
         </section>
         <section>
           <h3>flex-direction</h3>
+          <p>
+            This property specifies how flex items are laid out in the flex container,
+            by setting the direction of the flex container’s main axis. They can be laid
+            out in two main directions, like rows horizontally or like columns vertically.
+          </p>
+          <pre>
+            <code>
+              .flex-container {
+                flex-direction: row | row-reverse | column | column-reverse;
+              }
+            </code>
+          </pre>
         </section>
-      </section>
+        <section>
+          <h4>row</h4>
+          <img src="images/properties/flexbox-flex-direction-row.jpg"/>
+        </section>
+        <section>
+          <h4>row-reverse</h4>
+          <img src="images/properties/flexbox-flex-direction-row-reverse.jpg"/>
+        </section>
+        <section>
+          <h4>column</h4>
+          <img src="images/properties/flexbox-flex-direction-column.jpg"/>
+        </section>
+        <section>
+          <h4>column-reverse</h4>
+          <img src="images/properties/flexbox-flex-direction-column-reverse.jpg"/>
+        </section>
+
+        <section>
+          <h3>flex-wrap</h3>
+          <p>
+            The initial flexbox concept is the container to set its items in one single line.
+            The flex-wrap property controls if the flex container lay out its items in single
+            or multiple lines, and the direction the new lines are stacked in.
+          </p>
+          <pre>
+            <code>
+              .flex-container {
+                flex-wrap: wrap | nowrap | wrap-reverse;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h4>wrap</h4>
+          <img src="images/properties/flexbox-flex-wrap-wrap.jpg"/>
+        </section>
+        <section>
+          <h4>nowrap</h4>
+          <img src="images/properties/flexbox-flex-wrap-nowrap.jpg"/>
+        </section>
+        <section>
+          <h4>wrap-reverse</h4>
+          <img src="images/properties/flexbox-flex-wrap-wrap-reverse.jpg"/>
+        </section>
+
+
+        <section>
+          <h3>justify-content</h3>
+          <p>
+            The justify-content property aligns flex items along the main axis of
+            the current line of the flex container. It helps distribute left free
+            space when either all the flex items on a line are inflexible, or are
+            flexible but have reached their maximum size.
+          </p>
+          <pre>
+            <code>
+              .flex-container {
+                justify-content: flex-start | flex-end | center | space-between | space-around;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h4>flex-start</h4>
+          <img src="images/properties/flexbox-justify-content-flex-start.jpg"/>
+        </section>
+        <section>
+          <h4>flex-end</h4>
+          <img src="images/properties/flexbox-justify-content-flex-end.jpg"/>
+        </section>
+        <section>
+          <h4>center</h4>
+          <img src="images/properties/flexbox-justify-content-center.jpg"/>
+        </section>
+        <section>
+          <h4>space-between</h4>
+          <img src="images/properties/flexbox-justify-content-space-between.jpg"/>
+        </section>
+        <section>
+          <h4>space-around</h4>
+          <img src="images/properties/flexbox-justify-content-space-around.jpg"/>
+        </section>
+
+        <section>
+          <h3>align-items</h3>
+          <p>
+            Flex items can be aligned in the cross axis of the current line of the
+            flex container, similar to justify-content but in the perpendicular direction.
+            This property sets the default alignment for all flex items, including the anonymous ones.
+          </p>
+          <pre>
+            <code>
+              .flex-container {
+                align-items: stretch | flex-start | flex-end | center | baseline;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h4>stretch</h4>
+          <img src="images/properties/flexbox-align-items-stretch.jpg"/>
+        </section>
+        <section>
+          <h4>flex-start</h4>
+          <img src="images/properties/flexbox-align-items-flex-start.jpg"/>
+        </section>
+        <section>
+          <h4>flex-end</h4>
+          <img src="images/properties/flexbox-align-items-flex-end.jpg"/>
+        </section>
+        <section>
+          <h4>center</h4>
+          <img src="images/properties/flexbox-align-items-center.jpg"/>
+        </section>
+        <section>
+          <h4>baseline</h4>
+          <img src="images/properties/flexbox-align-items-baseline.jpg"/>
+        </section>
+
+        <section>
+          <h3>align-content</h3>
+          <p>
+            The align-content property aligns a flex container’s lines within the
+            flex container when there is extra space in the cross-axis, similar to
+            how justify-content aligns individual items within the main-axis.
+          </p>
+          <pre>
+            <code>
+              .flex-container {
+                align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h4>stretch</h4>
+          <img src="images/properties/flexbox-align-content-stretch.jpg"/>
+        </section>
+        <section>
+          <h4>flex-start</h4>
+          <img src="images/properties/flexbox-align-content-flex-start.jpg"/>
+        </section>
+        <section>
+          <h4>flex-end</h4>
+          <img src="images/properties/flexbox-align-content-flex-end.jpg"/>
+        </section>
+        <section>
+          <h4>center</h4>
+          <img src="images/properties/flexbox-align-content-center.jpg"/>
+        </section>
+        <section>
+          <h4>space-between</h4>
+          <img src="images/properties/flexbox-align-content-space-between.jpg"/>
+        </section>
+        <section>
+          <h4>space-around</h4>
+          <img src="images/properties/flexbox-align-content-space-around.jpg"/>
+        </section>
+
+        <section>
+          <h3>order</h3>
+          <p>
+            The order property controls the order in which children of a flex container
+            appear inside the flex container. By default they are ordered as initially
+            added in the flex container.
+          </p>
+          <pre>
+            <code>
+              .flex-item {
+                order: -integer-;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/properties/flexbox-order.jpg"/>
+        </section>
+
+        <section>
+          <h3>flex-grow</h3>
+          <p>
+            This property specifies the flex grow factor, which determines how much
+            the flex item will grow relative to the rest of the flex items in the
+            flex container when positive free space is distributed.
+          </p>
+          <pre>
+            <code>
+              .flex-item {
+                flex-grow: -number-;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/properties/flexbox-flex-grow-1.jpg"/>
+          <img src="images/properties/flexbox-flex-grow-2.jpg"/>
+        </section>
+
+        <section>
+          <h3>flex-shrink</h3>
+          <p>
+            The flex-shrink specifies the flex shrink factor, which determines how much
+            the flex item will shrink relative to the rest of the flex items in the
+            flex container when negative free space is distributed.
+          </p>
+          <pre>
+            <code>
+              .flex-item {
+                flex-shrink: -number-;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/properties/flexbox-flex-shrink.jpg"/>
+        </section>
+
+        <section>
+          <h3>flex-basis</h3>
+          <p>
+            This property takes the same values as the width and height properties,
+            and specifies the initial main size of the flex item, before free
+            space is distributed according to the flex factors.
+          </p>
+          <pre>
+            <code>
+              .flex-item {
+                flex-basis: auto | -width-;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/properties/flexbox-flex-basis.jpg"/>
+        </section>
+
+        <section>
+          <h3>flex</h3>
+          <p>
+            This property is the shorthand for the flex-grow, flex-shrink and flex-basis
+            properties. Among other values it also can be set to auto (1 1 auto) and none (0 0 auto).
+          </p>
+          <pre>
+            <code>
+              .flex-item {
+                flex: none | auto | [ flex-grow flex-shrink | flex-basis ];
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>align-self</h3>
+          <p>
+            This align-self property allows the default alignment (or the one specified by align-items)
+            to be overridden for individual flex items. Refer to align-items explanation for flex
+            container to understand the available values.
+          </p>
+          <pre>
+            <code>
+              .flex-item {
+                align-self: auto | flex-start | flex-end | center | baseline | stretch;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img src="images/properties/flexbox-align-self.jpg"/>
+        </section>
+
+
+      </section> <!-- properties end -->
+
 
       <section>
         <section><h2>Ejemplos de layouts</h2></section>
