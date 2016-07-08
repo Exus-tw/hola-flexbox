@@ -91,39 +91,38 @@
           </pre>
         </section>
         <section>
-          <img src="images/boxmodel.png" />
+          <img src="images/box-model.png" />
         </section>
         <section>
-          <img src="images/box-model.png" />
+          <img src="images/boxmodel.png" />
         </section>
         <section>
           <h3>Problemas</h3>
           <ul>
             <li>Aliñar items verticalmente</li>
-            <li>Clearfix hell</li>
-            <li>Altura automática</li>
             <li>Boxes con la misma altura</li>
-            <li>Posicionar items en la misma linea (float, inline o inline-block?)</li>
           </ul>
         </section>
         <section>
+          <h3>Clearfix Hell</h3>
+          <pre>
+            <code>
+              .clearfix {
+                content: "";
+                display: table;
+                clear: both;
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Posicionar items en la misma linea</h3>
           <pre>
              <code>
-               .clearfix {
-                 content: "";
-                 display: table;
-                 clear: both;
-               }
-
                .inline {
                  display: inline;
                  float: right;
                  display: inline-block;
-               }
-
-               .align-middle {
-                 vertical-align: middle;
-                 display: table-cell;
                }
              </code>
            </pre>
