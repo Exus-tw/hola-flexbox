@@ -198,8 +198,8 @@
         <section>
           <h4>.flex-container</h4>
           <ul>
-            <li class="fragment">flex-direction: flujo del contenido horizontal y vertical</li>
-            <li class="fragment">flex-wrap: controlar la distribución del contenido en lineas</li>
+            <li class="fragment">flex-direction: controlar el flujo del contenido horizontalmente y verticalmente</li>
+            <li class="fragment">flex-wrap: controlar la distribución del contenido en lineas y su dirección</li>
             <li class="fragment">justify-content: alinear el contenido con respecto al eje principal (main-axis)</li>
             <li class="fragment">align-items: alinear el contenido con respecto a la cruz (cross-axis)</li>
             <li class="fragment">align-content: alinear las lineas del container con respecto a la cruz</li>
@@ -218,9 +218,7 @@
         <section>
           <h3>flex-direction</h3>
           <p>
-            This property specifies how flex items are laid out in the flex container,
-            by setting the direction of the flex container’s main axis. They can be laid
-            out in two main directions, like rows horizontally or like columns vertically.
+            Controlar el flujo del contenido horizontalmente y verticalmente.
           </p>
           <pre>
             <code>
@@ -250,9 +248,7 @@
         <section>
           <h3>flex-wrap</h3>
           <p>
-            The initial flexbox concept is the container to set its items in one single line.
-            The flex-wrap property controls if the flex container lay out its items in single
-            or multiple lines, and the direction the new lines are stacked in.
+            Controlar la distribución del contenido en lineas y su dirección.
           </p>
           <pre>
             <code>
@@ -279,10 +275,7 @@
         <section>
           <h3>justify-content</h3>
           <p>
-            The justify-content property aligns flex items along the main axis of
-            the current line of the flex container. It helps distribute left free
-            space when either all the flex items on a line are inflexible, or are
-            flexible but have reached their maximum size.
+            Alinear el contenido con respecto al eje principal (main-axis).
           </p>
           <pre>
             <code>
@@ -316,9 +309,7 @@
         <section>
           <h3>align-items</h3>
           <p>
-            Flex items can be aligned in the cross axis of the current line of the
-            flex container, similar to justify-content but in the perpendicular direction.
-            This property sets the default alignment for all flex items, including the anonymous ones.
+            Alinear el contenido con respecto a la cruz (cross-axis).
           </p>
           <pre>
             <code>
@@ -352,9 +343,7 @@
         <section>
           <h3>align-content</h3>
           <p>
-            The align-content property aligns a flex container’s lines within the
-            flex container when there is extra space in the cross-axis, similar to
-            how justify-content aligns individual items within the main-axis.
+            Alinear las lineas del container con respecto a la cruz.
           </p>
           <pre>
             <code>
@@ -392,9 +381,7 @@
         <section>
           <h3>order</h3>
           <p>
-            The order property controls the order in which children of a flex container
-            appear inside the flex container. By default they are ordered as initially
-            added in the flex container.
+            Ordenar la presentación de los items.
           </p>
           <pre>
             <code>
@@ -411,9 +398,7 @@
         <section>
           <h3>flex-grow</h3>
           <p>
-            This property specifies the flex grow factor, which determines how much
-            the flex item will grow relative to the rest of the flex items in the
-            flex container when positive free space is distributed.
+            Factor de crecimiento de un item respecto a los otros items.
           </p>
           <pre>
             <code>
@@ -431,9 +416,7 @@
         <section>
           <h3>flex-shrink</h3>
           <p>
-            The flex-shrink specifies the flex shrink factor, which determines how much
-            the flex item will shrink relative to the rest of the flex items in the
-            flex container when negative free space is distributed.
+            Factor de encogimiento de un item respecto a los otros items.
           </p>
           <pre>
             <code>
@@ -450,9 +433,7 @@
         <section>
           <h3>flex-basis</h3>
           <p>
-            This property takes the same values as the width and height properties,
-            and specifies the initial main size of the flex item, before free
-            space is distributed according to the flex factors.
+            Determina el tamaño inicial de un item (si el espacio lo permite).
           </p>
           <pre>
             <code>
@@ -469,8 +450,7 @@
         <section>
           <h3>flex</h3>
           <p>
-            This property is the shorthand for the flex-grow, flex-shrink and flex-basis
-            properties. Among other values it also can be set to auto (1 1 auto) and none (0 0 auto).
+            (shorthand) para flex-grow, flex-shrink y flex-basis.
           </p>
           <pre>
             <code>
